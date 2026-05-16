@@ -4,7 +4,10 @@ const searchBtn = document.getElementById('searchbtn');
 const resetBtn = document.getElementById('clearbtn');
 const resultsContainer = document.getElementById('resultContainer');
 
-const apiURL = 'travel_recommendation_api.json';
+const closeBtn = document.getElementById('close-btn');
+const dropdown = document.getElementById('dropdown');
+
+const apiURL = 'travelrecommendation.json';
 
 // Time-zone registry
 const timeZones = {
@@ -26,6 +29,7 @@ function performSearch() {
     const keyword = searchInput.value.trim().toLowerCase();
 
     if (!keyword) {
+        dropdown.style.display = 'block';
         resultsContainer.innerHTML = `
             <p style="color:white; text-align:center;">
                 Please type a keyword to search.
@@ -45,12 +49,14 @@ function performSearch() {
         })
 
         .then(data => {
+            dropdown.style.display = 'block';
             processQuery(data, keyword);
         })
 
         .catch(error => {
 
             console.error(error);
+            dropdown.style.display = 'block';
 
             resultsContainer.innerHTML = `
                 <p style="color:red; text-align:center;">
@@ -239,5 +245,10 @@ resetBtn.addEventListener('click', () => {
     searchInput.value = '';
 
     clearDisplay();
+    dropdown.style.display = 'none';
 
+});
+
+closeBtn.addEventListener('click', () => {
+    dropdown.style.display = 'none';
 });
