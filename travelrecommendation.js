@@ -26,6 +26,10 @@ const timeZones = {
 // Main Search Function
 function performSearch() {
 
+    if (!searchInput || !resultsContainer || !dropdown) {
+        return;
+    }
+
     const keyword = searchInput.value.trim().toLowerCase();
 
     if (!keyword) {
@@ -224,31 +228,48 @@ function renderCards(places) {
 
 // Clear Results
 function clearDisplay() {
-    resultsContainer.innerHTML = '';
+    if (resultsContainer) {
+        resultsContainer.innerHTML = '';
+    }
 }
 
 // Search Button
-searchBtn.addEventListener('click', performSearch);
+if (searchBtn) {
+    searchBtn.addEventListener('click', performSearch);
+}
 
 // Enter Key
-searchInput.addEventListener('keypress', (e) => {
+if (searchInput) {
+    searchInput.addEventListener('keypress', (e) => {
 
-    if (e.key === 'Enter') {
-        performSearch();
-    }
+        if (e.key === 'Enter') {
+            performSearch();
+        }
 
-});
+    });
+}
 
 // Reset Button
-resetBtn.addEventListener('click', () => {
+if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
 
-    searchInput.value = '';
+        if (searchInput) {
+            searchInput.value = '';
+        }
 
-    clearDisplay();
-    dropdown.style.display = 'none';
+        clearDisplay();
 
-});
+        if (dropdown) {
+            dropdown.style.display = 'none';
+        }
 
-closeBtn.addEventListener('click', () => {
-    dropdown.style.display = 'none';
-});
+    });
+}
+
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        if (dropdown) {
+            dropdown.style.display = 'none';
+        }
+    });
+}
