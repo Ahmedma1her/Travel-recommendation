@@ -43,7 +43,7 @@
         },
         {
           "name": "Sao Paulo, Brazil",
-          "imageUrl": "https://img.freepik.com/premium-photo/aerial-view-av-paulista-sao-paulo-sp-main-avenue-capital-sunday-day-without-cars-with-people-walking-street_361869-212.jpg",
+          "imageUrl": "https://cdn.pixabay.com/photo/2016/11/29/05/08/architecture-1867187_640.jpg",
           "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
         }
       ]
@@ -67,13 +67,13 @@
     {
       "id": 1,
       "name": "Bora Bora, French Polynesia",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIpCLkrcIpmh76zPxzW4wk8rcxWYCDMop3yXYygkwdlg&s",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_640.jpg",
       "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
     },
     {
       "id": 2,
       "name": "Copacabana Beach, Brazil",
-      "imageUrl": "https://images.unsplash.com/photo-1596573677494-accc8fbe89e8?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29wYWNhYmFuYSUyMGJlYWNofGVufDB8fDB8fHww",
+      "imageUrl": "https://images.unsplash.com/photo-1596573677494-accc8fbe89e8?q=80&w=1000&auto=format&fit=crop",
       "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
     }
   ]
